@@ -1,14 +1,17 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { BsSearch } from "react-icons/bs";
 
+// interface Props {
+//   onFilter: (filterText: string) => void;
+// }
+// { onFilter }: Props
 const FilterInput = () => {
-
-//DOTO: Tuesday REF HTML
   const ref = useRef<HTMLInputElement>(null);
 
   return (
     <form
+      style={{ width: "100%" }}
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) console.log(ref.current.value);
